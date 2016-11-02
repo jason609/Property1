@@ -1,0 +1,467 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_common_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"/>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--主体部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--第一行: 商铺基本信息-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/between_element_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!--左侧小图-->
+                <ImageView
+                    android:id="@+id/shop_pic"
+                    android:layout_width="@dimen/image_small_width"
+                    android:layout_height="@dimen/image_small_height"
+                    android:paddingRight="@dimen/activity_padding_small"/>
+
+                <!--中间商家信息-->
+                <LinearLayout
+                    android:paddingTop="@dimen/activity_padding_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--商家名称-->
+                    <TextView
+                        android:id="@+id/shop_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/BasicTextSize"/>
+
+                    <!--营业时间-->
+                    <TextView
+                        android:id="@+id/shop_business_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/SmallTextSize" />
+
+                    <!--商家信用-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="left">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:singleLine="true"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/SmallTextSize"
+                            android:text="@string/shop_credit"/>
+                        <RatingBar
+                            android:id="@+id/shop_ratingBar"
+                            style="@style/roomRatingBar"
+                            android:numStars="5"
+                            android:isIndicator="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--右侧五角星-->
+                <ImageView
+                    android:id="@+id/right_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gray_star_none"
+                    android:paddingRight="@dimen/activity_padding_small"/>
+
+            </LinearLayout>
+
+            <!--第二行: 订单与评价-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/between_element_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!--最近订单数-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/activity_padding_small">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/LargeTextSize"
+                            android:text="@string/resent_order_nums"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/activity_padding_smaller"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/recent_order_nums"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_orange"
+                            android:textSize="@dimen/LargeTextSize"
+                            android:gravity="center"
+                            android:text=""/>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <!--全部评价-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/activity_padding_small">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/LargeTextSize"
+                            android:gravity="center"
+                            android:text="@string/all_comments"/>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/activity_padding_smaller"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/recent_order_comment_nums"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_orange"
+                            android:textSize="@dimen/LargeTextSize"
+                            android:gravity="center"
+                            android:text=""/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/LargeTextSize"
+                            android:gravity="center"
+                            android:text="@string/man"/>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--第三行: 电话号码-->
+            <LinearLayout
+                android:id="@+id/shop_tel_btn"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!--左侧小图-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gray_tel_icon"
+                    android:padding="@dimen/activity_padding_small"/>
+
+                <!--中间商家信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--商家电话号码-->
+                    <TextView
+                        android:id="@+id/shop_tel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:text=""/>
+
+
+                </LinearLayout>
+
+                <!--右侧箭头-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gray_arrow_right_none"
+                    android:paddingRight="@dimen/activity_padding_small"/>
+
+            </LinearLayout>
+
+            <!--第四行: 店铺介绍-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/activity_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!--左侧小图-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gray_intro_icon"
+                    android:padding="@dimen/activity_padding_small"/>
+
+                <!--店铺详细标题-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--商家介绍标题-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:text="@string/shop_intro_title"/>
+
+
+                </LinearLayout>
+
+                <!--右侧箭头-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gray_arrow_right_none"
+                    android:paddingRight="@dimen/activity_padding_small"/>
+
+            </LinearLayout>
+
+            <!--第五行: 店铺介绍 内容-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!--左侧小图-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_padding_small"
+                    android:src="@drawable/none48"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/activity_padding"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/shop_intro_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:text=""/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--第六行: 地址-->
+            <LinearLayout
+                android:id="@+id/shop_address_btn"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!--左侧小图-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gray_locate"
+                    android:padding="@dimen/activity_padding_small"/>
+
+                <!--地址-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--地址-->
+                    <TextView
+                        android:id="@+id/shop_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:text=""/>
+
+
+                </LinearLayout>
+
+                <!--右侧箭头-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gray_arrow_right_none"
+                    android:paddingRight="@dimen/activity_padding_small"/>
+
+            </LinearLayout>
+
+            <!--第七行: 评价详情 标题-->
+            <LinearLayout
+                android:id="@+id/more_comment_btn"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:layout_marginBottom="@dimen/activity_padding_smaller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!--左侧小图-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gray_comment"
+                    android:padding="@dimen/activity_padding_small"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:text="@string/comment_detail_title"/>
+
+
+                </LinearLayout>
+
+                <!--右侧箭头-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gray_arrow_right_none"
+                    android:paddingRight="@dimen/activity_padding_small"/>
+
+            </LinearLayout>
+
+            <!--第七行: 商家列表-->
+            <com.ctrl.android.property.eric.ui.widget.ListViewForScrollView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:footerDividersEnabled="true"
+                android:divider="@null">
+
+            </com.ctrl.android.property.eric.ui.widget.ListViewForScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

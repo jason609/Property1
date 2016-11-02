@@ -1,0 +1,286 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_bg"
+    tools:context="com.ctrl.android.property.jason.ui.secondmarket.TransferActivity">
+
+    <include layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_baobei_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/baobei_title"
+            android:layout_marginTop="15dp"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_marginLeft="20dp"/>
+
+         <EditText
+             android:padding="5dp"
+             android:id="@+id/et_baobei_title"
+             android:layout_toRightOf="@id/tv_baobei_title"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text=""
+             android:textSize="@dimen/BasicTextSize"
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="30dp"
+             android:background="@drawable/edit_shap_gray"/>
+        <TextView
+            android:id="@+id/tv_baobei_detail"
+            android:layout_below="@id/tv_baobei_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/baobei_detail"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/et_baobei_detail"
+            android:layout_below="@id/et_baobei_title"
+            android:layout_toRightOf="@id/tv_baobei_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:text=""
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:gravity="top"
+            android:background="@drawable/edit_shap_gray"
+            android:lines="6"/>
+
+        <TextView
+            android:id="@+id/tv_baobei_image"
+            android:layout_below="@id/et_baobei_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/baobei_image"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <LinearLayout
+            android:layout_below="@id/tv_baobei_image"
+            android:paddingBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv01_second_hand_transfer"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:layout_width="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/green_add_img_icon"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv02_second_hand_transfer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/green_add_img_icon"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+        <ImageView
+            android:id="@+id/iv03_second_hand_transfer"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/green_add_img_icon"
+            android:layout_width="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_height="wrap_content"
+            android:text="转让价："/>
+        <EditText
+            android:id="@+id/et_baobei_transferprice"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/BasicTextSize"
+            android:background="@drawable/edit_shap_gray"/>
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_height="wrap_content"
+            android:text="原价："/>
+        <EditText
+            android:id="@+id/et_baobei_originalprice"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/BasicTextSize"
+            android:background="@drawable/edit_shap_gray"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_wang_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv007"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_height="wrap_content"
+            android:text="选择分类："/>
+        <TextView
+            android:id="@+id/tv_secong_hand_transfer_type"
+            android:layout_toRightOf="@id/tv007"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gray_arrow_right_none"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/BasicTextSize"
+            />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/et_contact"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:textSize="@dimen/BasicTextSize"
+            android:background="@drawable/edit_shap_gray"
+            android:layout_alignLeft="@+id/et_contact_telephone"
+            android:layout_alignStart="@+id/et_contact_telephone" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/tv_contact_telephone"
+            android:layout_below="@id/tv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_telephone"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/BasicTextSize"
+            />
+
+        <EditText
+            android:id="@+id/et_contact_telephone"
+            android:padding="5dp"
+            android:layout_below="@id/et_contact"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_contact_telephone"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/BasicTextSize"
+            android:background="@drawable/edit_shap_gray"
+            />
+
+        <TextView
+            android:layout_below="@id/et_contact_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+    </RelativeLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

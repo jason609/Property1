@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="@dimen/activity_padding_small">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_padding_small"
+        android:orientation="horizontal">
+
+        <!--到访编号-->
+        <TextView
+            android:id="@+id/visit_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="@dimen/BasicTextSize"
+            android:singleLine="true"
+            android:textColor="@color/text_gray"
+            android:text="到访编号: 201502213244"/>
+
+        <!--到访时间-->
+        <TextView
+            android:id="@+id/visit_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textSize="@dimen/BasicTextSize"
+            android:textColor="@color/text_gray"
+            android:text="2015.10.26"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_padding_small"
+        android:paddingRight="@dimen/activity_padding_small"
+        android:paddingBottom="@dimen/activity_padding_small"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/visit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_smaller"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="@color/text_black"
+                android:text="李倩"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_smaller"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="@color/text_gray"
+                android:text="的到访"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/visit_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_smaller"
+                android:background="@drawable/orange_bg_shap"
+                android:textSize="@dimen/BasicTextSize"
+                android:textColor="@color/text_white"
+                android:text="已预约"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/visit_flg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/appointment_flg_icon"/>
+
+</RelativeLayout>

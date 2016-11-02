@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+
+    <!--header-->
+    <include layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <!--全部商品 按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_padding"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="left"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <CheckBox
+            android:id="@+id/allCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/checkbox_green_selector" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:visibility="gone"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!--商品列表-->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="150"
+        android:dividerHeight="@dimen/activity_padding_small"
+        android:footerDividersEnabled="true"
+        android:divider="@null">
+
+    </ListView>
+
+    <!--下方结算栏-->
+    <LinearLayout
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_padding_small"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/check_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:button="@drawable/checkbox_green_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:text="@string/all_pro"
+                android:textSize="@dimen/LargeTextSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_black"
+                android:text="@string/sum_all"
+                android:textSize="@dimen/LargeTextSize" />
+
+            <TextView
+                android:id="@+id/cart_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_orange"
+                android:text="¥10.00"
+                android:textSize="@dimen/LargeTextSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/buy_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="结算(10)"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="@color/white"
+                android:layout_gravity="right"
+                android:background="@color/dark_green" />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

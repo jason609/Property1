@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/station_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_padding_small"
+        android:textSize="@dimen/LargeTextSize"
+        android:text="卢浮公馆小区服务站"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_padding_smaller"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gray_arrow_locate_up"/>
+        <TextView
+            android:id="@+id/station_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/activity_padding_smaller"
+            android:singleLine="true"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/LargeTextSize"
+            android:text="100M"/>
+
+        <ImageView
+            android:layout_width="@dimen/between_element_margin"
+            android:layout_height="16sp"
+            android:src="@color/text_gray"/>
+
+        <TextView
+            android:id="@+id/station_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/activity_padding_smaller"
+            android:paddingLeft="@dimen/activity_padding_smaller"
+            android:singleLine="true"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/LargeTextSize"
+            android:text="31路;31路;31路;31路;31路;31路;31路;31路;31路;31路;"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

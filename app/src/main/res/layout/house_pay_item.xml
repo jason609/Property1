@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <!--费用名称价格以及加入交费-->
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_padding_smaller"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pay_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/TitleTextSize"
+            android:text="水费"/>
+
+        <TextView
+            android:id="@+id/pay_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/TitleTextSize"
+            android:textColor="@color/text_red"
+            android:text="25.5"/>
+
+        <TextView
+            android:id="@+id/pay_add_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_padding"
+            android:layout_marginRight="@dimen/activity_padding"
+            android:padding="@dimen/activity_padding_smaller"
+            android:background="@drawable/orange_bg_shap"
+            android:textSize="@dimen/TitleTextSize"
+            android:textColor="@color/text_white"
+            android:text="加入缴费"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/other_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--收费标准-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding_smaller"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pay_standard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="收费标准: 物业费(单价*面积)0.90"/>
+
+        </LinearLayout>
+
+        <!--应收日期-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding_smaller"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pay_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="应收日期: 2015.10.01"/>
+
+        </LinearLayout>
+
+        <!--计费时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding_smaller"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:text="计费开始时间:"/>
+                <TextView
+                    android:id="@+id/pay_time_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/SmallTextSize"
+                    android:text="2015.10.01"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:text="计费结束时间:"/>
+                <TextView
+                    android:id="@+id/pay_time_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/SmallTextSize"
+                    android:text="2015.10.01"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--金额和滞纳金-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding_smaller"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:text="金额:"/>
+                <TextView
+                    android:id="@+id/pay_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="20.00"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:text="滞纳金:"/>
+                <TextView
+                    android:id="@+id/pay_cost_delay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="20.00"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--应收金额和已收金额-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding_smaller"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:text="应收金额:"/>
+                <TextView
+                    android:id="@+id/pay_cost_will"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="20.00"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:text="已收金额:"/>
+                <TextView
+                    android:id="@+id/pay_cost_already"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="20.00"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--欠款和欠款月数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding_smaller"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:text="欠款:"/>
+                <TextView
+                    android:id="@+id/pay_own_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="20.00"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:text="欠款月数:"/>
+                <TextView
+                    android:id="@+id/pay_own_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="2"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+

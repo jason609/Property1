@@ -1,0 +1,265 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ctrl.android.property.jason.ui.JActivity.ShippingAddressActivity"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    android:id="@+id/citypicker_layout"
+
+   >
+
+    <include layout="@layout/toolbar_common_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:id="@+id/include" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TextViewHeight"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="收货人   "
+            android:textSize="@dimen/LargeTextSize"
+            android:textColor="@color/text_gray"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_shipping_adress_consignee" />
+        <EditText
+            android:id="@+id/et_shipping_adress_consignee"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/tv_shipping_adress_consignee"
+            android:layout_toEndOf="@id/tv_shipping_adress_consignee"
+            android:layout_marginLeft="30dp"/>
+
+    </RelativeLayout>
+    <View style="@style/Divider"
+        android:layout_height="1dp"
+        android:layout_above="@+id/tv_shipping_adress_phonenumber"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TextViewHeight"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="手机号   "
+            android:textSize="@dimen/LargeTextSize"
+            android:textColor="@color/text_gray"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_shipping_adress_phonenumber" />
+        <EditText
+            android:id="@+id/et_shipping_adress_phonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/tv_shipping_adress_phonenumber"
+            android:layout_toEndOf="@+id/tv_shipping_adress_phonenumber"
+            android:layout_marginLeft="30dp"/>
+
+    </RelativeLayout>
+    <View style="@style/Divider"
+        android:layout_height="1dp"
+        android:layout_above="@+id/tv_shipping_adress_postalcode"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TextViewHeight"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="邮政编码"
+            android:textSize="@dimen/LargeTextSize"
+            android:textColor="@color/text_gray"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_shipping_adress_postalcode" />
+        <EditText
+            android:id="@+id/et_shipping_adress_postalcode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/tv_shipping_adress_postalcode"
+            android:layout_toEndOf="@+id/tv_shipping_adress_postalcode"
+            android:layout_marginLeft="30dp"/>
+
+    </RelativeLayout>
+    <View style="@style/Divider"
+        android:layout_height="1dp"
+        android:layout_above="@+id/tv_shipping_adress_userarea"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TextViewHeight"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="所在地区"
+            android:textSize="@dimen/LargeTextSize"
+            android:textColor="@color/text_gray"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_shipping_adress_userarea" />
+        <TextView
+            android:id="@+id/et_shipping_adress_userarea"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/tv_shipping_adress_userarea"
+            android:layout_toEndOf="@id/tv_shipping_adress_userarea"
+            android:layout_marginLeft="30dp"/>
+
+    </RelativeLayout>
+    <View style="@style/Divider"
+        android:layout_height="1dp"
+        android:layout_above="@+id/tv_shipping_adress_streetroad"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TextViewHeight"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="街道       "
+            android:textSize="@dimen/LargeTextSize"
+            android:textColor="@color/text_gray"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_shipping_adress_streetroad" />
+        <EditText
+            android:id="@+id/et_shipping_adress_streetroad"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/tv_shipping_adress_streetroad"
+            android:layout_toEndOf="@id/tv_shipping_adress_streetroad"
+            android:layout_marginLeft="30dp"/>
+
+    </RelativeLayout>
+    <View style="@style/Divider"
+        android:layout_height="1dp"
+        android:layout_above="@+id/tv_shipping_adress_detailedadress"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TextViewHeight"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="详细地址"
+            android:textSize="@dimen/LargeTextSize"
+            android:textColor="@color/text_gray"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_shipping_adress_detailedadress" />
+        <EditText
+            android:id="@+id/et_shipping_adress_detailedadress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/tv_shipping_adress_detailedadress"
+            android:layout_toEndOf="@id/tv_shipping_adress_detailedadress"
+            android:layout_marginLeft="30dp"/>
+
+    </RelativeLayout>
+    <View style="@style/Divider"
+        android:layout_height="1dp"
+        android:layout_above="@id/management_shipping_adress_btn"/>
+
+    <TextView
+        android:id="@+id/tv_shippping_adress_deleteshippingadress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TextViewHeight"
+        android:layout_marginTop="@dimen/list_divier"
+        android:background="@color/white"
+        android:text="删除收货地址"
+        android:textColor="@color/text_red"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="@dimen/LargeTextSize"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View style="@style/Divider"
+            android:layout_height="1dp"
+            android:layout_above="@id/management_shipping_adress_btn"/>
+
+        <Button
+            android:id="@+id/management_shipping_adress_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_green_selector"
+            android:text="设成默认收货地址"
+            android:textColor="@color/white"
+            android:textSize="@dimen/LargeTextSize"
+            android:paddingRight="60dp"
+            android:paddingLeft="60dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

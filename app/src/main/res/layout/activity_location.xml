@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ctrl.android.property.jason.ui.JActivity.Location"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"/>
+
+    <!-- 第一行  显示大概位置-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#E5F0EA"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="猜你在："
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/LargeTextSize"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_textview_margin"
+            android:textSize="@dimen/BasicTextSize"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/list_divier">
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/TextViewHeight">
+            <TextView
+                android:id="@+id/currentcity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="当前定位城市:"
+                android:textSize="@dimen/BasicTextSize"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:text="定位不准时，请在城市列表中选择"
+                android:textColor="@color/text_gray"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/TextViewHeight"
+            android:layout_below="@id/currentcity"
+            android:text="济南"
+            android:textColor="@color/text_green"
+            android:textSize="@dimen/LargeTextSize"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="15dp"
+            />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

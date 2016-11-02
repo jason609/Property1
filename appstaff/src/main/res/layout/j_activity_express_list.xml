@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_bg"
+    tools:context="com.ctrl.android.property.staff.ui.express.ExpressListActivity">
+
+
+    <include layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"/>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_refresh_express"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/light_gray"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/task_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:padding="@dimen/activity_padding_smaller"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/LargeTextSize"/>
+
+    <TextView
+        android:layout_width="@dimen/between_element_margin"
+        android:layout_height="match_parent"
+        android:background="@color/dark_green"/>
+
+    <TextView
+        android:id="@+id/task_from"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:padding="@dimen/activity_padding_smaller"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/LargeTextSize"/>
+
+    <TextView
+        android:layout_width="@dimen/between_element_margin"
+        android:layout_height="match_parent"
+        android:background="@color/dark_green"/>
+
+    <TextView
+        android:id="@+id/task_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:padding="@dimen/activity_padding_smaller"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/LargeTextSize"/>
+
+
+
+</LinearLayout>
+

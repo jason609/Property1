@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <!--表头-->
+    <RadioGroup
+        android:layout_below="@+id/header"
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/between_element_margin"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_all_act"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/checkbox_green_style01"
+            android:textColor="@drawable/checkbox_green_text_color_selector"
+            android:text="@string/all_act"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/activity_padding_smaller"
+            android:layout_marginLeft="@dimen/activity_padding"
+            android:singleLine="true"
+            android:textSize="15sp"
+            android:checked="false">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/radio_I_take_in"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/checkbox_green_style03"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/I_take_in"
+            android:textColor="@drawable/checkbox_green_text_color_selector"
+            android:singleLine="true"
+            android:padding="@dimen/activity_padding_smaller"
+            android:textSize="@dimen/BasicTextSize">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/radio_I_start_up"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/checkbox_green_style02"
+            android:textColor="@drawable/checkbox_green_text_color_selector"
+            android:text="@string/I_start_up"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/activity_padding_smaller"
+            android:singleLine="true"
+            android:layout_marginRight="@dimen/activity_padding"
+            android:textSize="15sp"
+            android:checked="false">
+        </RadioButton>
+
+
+    </RadioGroup>
+
+    <!--内容-->
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/radio_group"
+        android:id="@+id/viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:flipInterval="400"
+        android:persistentDrawingCache="animation" />
+
+
+</RelativeLayout>

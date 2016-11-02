@@ -1,0 +1,310 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    tools:context="com.ctrl.android.property.jason.ui.complaint.MyComplaintPretreatmentActivity">
+
+
+    <include layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:background="#ffffff"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_my_complaint_pretreament_progress"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/LargeTextSize"/>
+
+            <TextView
+                android:id="@+id/tv_my_complaint_pretreament_room"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:text=""
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/BasicTextSize"/>
+            <TextView
+                android:id="@+id/tv_my_complaint_pretreament_time"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:text=""
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/BasicTextSize"/>
+            <TextView
+                android:id="@+id/tv_my_complaint_pretreament_type"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:text=""
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/BasicTextSize"/>
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:text="投诉内容："
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/BasicTextSize"/>
+
+            <TextView
+                android:id="@+id/tv_my_complaint_pretreament_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:inputType="textMultiLine"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_tousu_image"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实景照片"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="@color/text_gray"/>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv01_my_complaint_pretreament"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    />
+                <ImageView
+                    android:id="@+id/iv02_my_complaint_pretreament"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    />
+                <ImageView
+                    android:id="@+id/iv03_my_complaint_pretreament"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_my_complaint_wuye"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_my_complaint_pretreament_progress_wuye"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/LargeTextSize"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:text="处理结果："
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/BasicTextSize"/>
+
+            <TextView
+                android:id="@+id/tv_my_complaint_pretreament_progress_result"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:inputType="textMultiLine"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_wuye_image"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="反馈照片"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="@color/text_gray"/>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv04_my_complaint_pretreament"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    />
+                <ImageView
+                    android:id="@+id/iv05_my_complaint_pretreament"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    />
+                <ImageView
+                    android:id="@+id/iv06_my_complaint_pretreament"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_my_complaint_pinjia"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="评价"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/LargeTextSize"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_complaint"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_complaint_01"
+                        android:paddingLeft="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:text="非常满意"
+                        android:textColor="@color/white"
+                        android:checked="true"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:background="@drawable/radiobutton_green_selector"
+                        />
+                    <RadioButton
+                        android:id="@+id/rb_complaint_02"
+                        android:paddingLeft="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:text="基本满意"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:background="@drawable/radiobutton_green_selector"
+                        />
+                    <RadioButton
+                        android:id="@+id/rb_complaint_03"
+                        android:paddingLeft="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="不满意"
+                        android:textColor="@color/text_gray"
+                        android:button="@null"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:background="@drawable/radiobutton_green_selector"
+                        />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:text="评价内容："
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/BasicTextSize"/>
+
+                <EditText
+                    android:id="@+id/et_my_complaint_pretreament_content"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:lines="6"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:paddingLeft="5dp"
+                    android:inputType="textMultiLine"
+                    android:background="@drawable/edit_shap_gray"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

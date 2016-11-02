@@ -1,0 +1,246 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_common_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--主体部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/company_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:textSize="@dimen/TitleTextSize"
+                android:text="商家名称"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/TitleTextSize"
+                    android:text="合计:  "/>
+
+                <TextView
+                    android:id="@+id/pay_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/TitleTextSize"
+                    android:textColor="@color/text_red"
+                    android:text=""/>
+
+            </LinearLayout>
+
+
+            <!--第一行: 支付宝-->
+            <LinearLayout
+                android:id="@+id/zhi_fu_bao_btn"
+                android:layout_marginTop="@dimen/between_element_margin"
+                android:padding="@dimen/activity_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/zhi_fu_bao_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/activity_padding_smaller"
+                    android:button="@drawable/checkbox_green_selector"/>
+
+                <ImageView
+                    android:layout_width="@dimen/image_small_width"
+                    android:layout_height="@dimen/image_small_height"
+                    android:paddingRight="@dimen/activity_padding_small"
+                    android:src="@drawable/zhi_fu_bao_icon"/>
+
+                <LinearLayout
+                    android:paddingTop="@dimen/activity_padding_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:text="@string/zhi_fu_bao_pay_title"/>
+
+                    <TextView
+                        android:paddingTop="@dimen/activity_padding_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:text="@string/zhi_fu_bao_pay_intro"/>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--第二行: 微信-->
+            <LinearLayout
+                android:id="@+id/wei_xin_btn"
+                android:layout_marginTop="@dimen/between_element_margin"
+                android:padding="@dimen/activity_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/wei_xin_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/activity_padding_smaller"
+                    android:button="@drawable/checkbox_green_selector"/>
+
+                <ImageView
+                    android:layout_width="@dimen/image_small_width"
+                    android:layout_height="@dimen/image_small_height"
+                    android:paddingRight="@dimen/activity_padding_small"
+                    android:src="@drawable/wei_xin_icon"/>
+
+                <LinearLayout
+                    android:paddingTop="@dimen/activity_padding_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:text="@string/wei_xin_pay_title"/>
+
+                    <TextView
+                        android:paddingTop="@dimen/activity_padding_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:text="@string/wei_xin_pay_intro"/>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!--第三行: 银联-->
+            <LinearLayout
+                android:id="@+id/yin_lian_btn"
+                android:layout_marginTop="@dimen/between_element_margin"
+                android:padding="@dimen/activity_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/yin_lian_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/activity_padding_smaller"
+                    android:button="@drawable/checkbox_green_selector"/>
+
+                <ImageView
+                    android:layout_width="@dimen/image_small_width"
+                    android:layout_height="@dimen/image_small_height"
+                    android:paddingRight="@dimen/activity_padding_small"
+                    android:src="@drawable/yin_lian_icon"/>
+
+                <LinearLayout
+                    android:paddingTop="@dimen/activity_padding_small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:text="@string/yin_lian_pay_title"/>
+
+                    <TextView
+                        android:paddingTop="@dimen/activity_padding_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:text="@string/yin_lian_pay_intro"/>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pay_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding"
+                android:gravity="center"
+                android:layout_margin="@dimen/activity_padding"
+                android:background="@color/light_green"
+                android:textSize="@dimen/TitleTextSize"
+                android:textColor="@color/text_white"
+                android:text="确认支付"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

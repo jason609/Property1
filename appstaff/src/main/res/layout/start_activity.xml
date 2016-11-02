@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_bg"
+    android:orientation="vertical">
+    <!--<include layout="@layout/toolbar_common"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/main_tab_height"-->
+        <!--android:layout_alignParentTop="true"/>-->
+    
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="50dp"
+            android:textSize="14sp"
+            android:text=""
+            android:gravity="center"/>
+</LinearLayout>

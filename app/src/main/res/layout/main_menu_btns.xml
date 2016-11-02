@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/main_bg"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <!--首页 toolbar按钮-->
+    <RelativeLayout
+        android:id="@+id/menu_main_page_btn"
+        android:clickable="true"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
+
+        <ImageView
+            android:id="@+id/menu_main_page_btn_img"
+            android:layout_above="@+id/menu_main_page_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/main_menu_main_page_selector"
+            android:layout_margin="3dp" />
+
+        <TextView
+            android:id="@+id/menu_main_page_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="1dp"
+            android:textColor="@drawable/main_menu_text_color_selector"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/menu_main_page"
+            android:textIsSelectable="false"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <!--服务 toolbar按钮-->
+    <RelativeLayout
+        android:id="@+id/menu_service_btn"
+        android:clickable="true"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
+
+        <ImageView
+            android:id="@+id/menu_service_btn_img"
+            android:layout_above="@+id/menu_service_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/main_menu_service_selector"
+            android:layout_margin="3dp" />
+
+        <TextView
+            android:id="@+id/menu_service_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="1dp"
+            android:textColor="@drawable/main_menu_text_color_selector"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/menu_service"
+            android:textIsSelectable="false"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <!--购物车 toolbar按钮-->
+    <RelativeLayout
+        android:id="@+id/menu_cart_btn"
+        android:clickable="true"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
+
+        <ImageView
+            android:id="@+id/menu_cart_btn_img"
+            android:layout_above="@+id/menu_cart_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/main_menu_cart_selector"
+            android:layout_margin="3dp" />
+
+        <TextView
+            android:id="@+id/menu_cart_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="1dp"
+            android:textColor="@drawable/main_menu_text_color_selector"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/menu_cart"
+            android:textIsSelectable="false"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <!--我的 toolbar按钮-->
+    <RelativeLayout
+        android:id="@+id/menu_my_btn"
+        android:clickable="true"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
+
+        <ImageView
+            android:id="@+id/menu_my_btn_img"
+            android:layout_above="@+id/menu_my_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/main_menu_my_selector"
+            android:layout_margin="3dp" />
+
+        <TextView
+            android:id="@+id/menu_my_btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="1dp"
+            android:textColor="@drawable/main_menu_text_color_selector"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/menu_my"
+            android:textIsSelectable="false"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

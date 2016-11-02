@@ -1,0 +1,35 @@
+密钥库类型: JKS                                                                                                                                                          
+密钥库提供方: SUN                                                                                                                                                        
+
+您的密钥库包含 1 个条目                                                                                                                                                  
+
+别名: property                                                                                                                                                           
+创建日期: 2015-10-14                                                                                                                                                     
+条目类型: PrivateKeyEntry                                                                                                                                                
+证书链长度: 1                                                                                                                                                            
+证书[1]:                                                                                                                                                                 
+所有者: CN=Eric Shi, OU=CTRL, O=CTRL, L=Jinan, ST=Shandong, C=CN                                                                                                         
+发布者: CN=Eric Shi, OU=CTRL, O=CTRL, L=Jinan, ST=Shandong, C=CN                                                                                                         
+序列号: 65e32c5a                                                                                                                                                         
+有效期开始日期: Wed Oct 14 09:40:53 CST 2015, 截止日期: Thu Oct 01 09:40:53 CST 2065                                                                                     
+证书指纹:                                                                                                                                                                
+         MD5: B0:13:9F:F3:1C:AA:A0:9E:5D:D0:3D:95:FF:80:AF:47
+         SHA1: 0C:7E:7D:A0:CA:61:9C:31:C8:77:45:54:CC:60:9C:66:7F:C4:D4:31
+         SHA256: 2C:A8:C9:8E:7D:96:F2:1D:74:FC:C7:74:14:6C:E6:8B:C9:4A:B4:2F:97:5B:25:D4:FC:92:46:D2:1E:C4:67:56
+         签名算法名称: SHA256withRSA                                                                                                                                     
+         版本: 3                                                                                                                                                         
+
+扩展:                                                                                                                                                                    
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 89 00 DD 93 9E 56 D7 F1   FF FF 23 B5 13 E9 19 D9  .....V....#.....
+0010: 8A B0 5D 14                                        ..].
+]
+]
+
+
+
+*******************************************
+*******************************************

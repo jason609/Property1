@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/activity_padding_small">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/hotline2_head_img"
+                android:layout_width="@dimen/image_smaller_width"
+                android:layout_height="@dimen/image_smaller_height"
+                android:src="@drawable/hotline_default_head_img"/>
+
+            <TextView
+                android:id="@+id/hotline2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/activity_padding_small"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="@color/text_black"
+                android:text="曾小贤"/>
+
+            <TextView
+                android:id="@+id/hotline2_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/activity_padding_small"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="@color/text_gray"
+                android:text="电台主持"/>
+
+            <TextView
+                android:id="@+id/hotline2_duty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/activity_padding_small"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="@color/text_gray"
+                android:text="主持你的月亮我的心"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/hotline2_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/easy_shop_around_service_phone_icon"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/between_element_margin"
+        android:background="@color/main_bg"/>
+
+
+</LinearLayout>
+

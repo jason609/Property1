@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--删除按钮-->
+    <LinearLayout
+        android:layout_width="@dimen/slip_del_btn_width"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/delBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_white"
+            android:background="@color/dark_green"
+            android:gravity="center"
+            android:text="删除"/>
+    </LinearLayout>
+
+    <!--内容部分-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/activity_padding"
+        android:padding="16dp"
+        android:focusable="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent">
+
+        <!--选择按钮-->
+        <CheckBox
+            android:id="@+id/item_checkbox"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:button="@drawable/checkbox_green_selector" />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/BasicTextSize"
+            android:paddingLeft="@dimen/activity_padding_small"
+            android:singleLine="true"
+            android:textColor="@color/text_black"
+            android:text="中润世纪广场"/>
+
+        <!--楼号 单元号 房号-->
+        <TextView
+            android:id="@+id/item_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/BasicTextSize"
+            android:paddingLeft="@dimen/activity_padding_small"
+            android:singleLine="true"
+            android:textColor="@color/text_black"
+            android:text="中润世纪广场"/>
+
+    </LinearLayout>
+</com.daimajia.swipe.SwipeLayout>
+

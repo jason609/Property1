@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_padding_smaller"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/easy_shop_around_shop_icon"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_padding_smaller"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_weight="4">
+
+        <TextView
+            android:id="@+id/easy_shop_arround_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="@dimen/LargeTextSize"
+            android:textColor="@color/text_black"
+            android:text="济南科技市场二期市场"/>
+
+        <TextView
+            android:id="@+id/easy_shop_arround_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_padding_smaller"
+            android:singleLine="true"
+            android:drawableLeft="@drawable/easy_shop_around_locate_icon"
+            android:textSize="@dimen/LargeTextSize"
+            android:textColor="@color/text_gray"
+            android:text="济南历下区山大路133号"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_padding_small"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/easy_shop_arround_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/easy_shop_around_phone_icon"/>
+    </LinearLayout>
+
+</LinearLayout>
+

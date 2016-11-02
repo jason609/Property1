@@ -1,0 +1,77 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!--表头-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_padding"
+        android:paddingRight="@dimen/activity_padding"
+        android:orientation="horizontal">
+
+        <!--养护时间-->
+        <TextView
+            android:id="@+id/device_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/activity_padding_small"
+            android:gravity="center"
+            android:background="@color/light_gray"
+            android:singleLine="true"
+            android:textSize="@dimen/BasicTextSize"
+            android:textColor="@color/text_black"/>
+
+        <TextView
+            android:layout_width="@dimen/between_element_margin"
+            android:layout_height="match_parent"
+            android:background="@color/dark_green"/>
+
+        <!--养护人-->
+        <TextView
+            android:id="@+id/device_man"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/activity_padding_small"
+            android:gravity="center"
+            android:background="@color/light_gray"
+            android:singleLine="true"
+            android:textSize="@dimen/BasicTextSize"
+            android:textColor="@color/text_black"/>
+
+        <TextView
+            android:layout_width="@dimen/between_element_margin"
+            android:layout_height="match_parent"
+            android:background="@color/dark_green"/>
+
+        <!--详细-->
+        <TextView
+            android:id="@+id/device_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/activity_padding_small"
+            android:gravity="center"
+            android:background="@color/light_gray"
+            android:singleLine="true"
+            android:textSize="@dimen/BasicTextSize"
+            android:textColor="@color/text_black"
+            android:text="@string/detail"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/between_element_margin"
+        android:layout_marginLeft="@dimen/activity_padding"
+        android:layout_marginRight="@dimen/activity_padding"
+        android:background="@color/dark_green"/>
+
+    </LinearLayout>

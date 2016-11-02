@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/viewpager_title_press_green_line" android:state_checked="true"/>
+    <item android:drawable="@drawable/viewpager_title_green_line"/>
+
+</selector>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:background="@color/main_bg"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_padding_smaller"
+        android:layout_marginTop="@dimen/activity_padding_smaller"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!--商品图片-->
+        <ImageView
+            android:id="@+id/order_pro_image"
+            android:layout_width="@dimen/image_small_width"
+            android:layout_height="@dimen/image_small_height"
+            android:src="@drawable/pro_pic_01"/>
+
+        <!--商品信息-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_padding_smaller"
+            android:orientation="vertical">
+
+            <!--商品名称-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="left"
+                android:padding="1dp">
+
+                <TextView
+                    android:id="@+id/order_pro_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/text_black"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <!--商品简介-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="left">
+
+                <TextView
+                    android:id="@+id/order_pro_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:singleLine="true"
+                    android:textColor="@color/text_gray"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <!--商品价格和数量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="left">
+
+                <TextView
+                    android:id="@+id/order_pro_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:gravity="left"
+                    android:textColor="@color/text_orange"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/order_pro_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:gravity="right"
+                    android:textColor="@color/text_black"
+                    android:text=""/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

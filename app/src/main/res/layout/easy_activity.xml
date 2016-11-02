@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <!--公交出行-->
+    <TextView
+        android:id="@+id/easy_bus_btn"
+        style="@style/easy_btn_style"
+        android:drawableLeft="@drawable/easy_bus_icon"
+        android:text="@string/bus_info"/>
+
+    <!--便民商家-->
+    <TextView
+        android:id="@+id/easy_shop_btn"
+        style="@style/easy_btn_style"
+        android:drawableLeft="@drawable/easy_shop_icon"
+        android:text="@string/shop_info"/>
+
+    <!--教育资源-->
+    <TextView
+        android:id="@+id/easy_edu_btn"
+        style="@style/easy_btn_style"
+        android:drawableLeft="@drawable/easy_edu_icon"
+        android:text="@string/edu_info"/>
+
+    <!--社区推荐-->
+    <TextView
+        android:id="@+id/easy_community_recommend_btn"
+        style="@style/easy_btn_style"
+        android:drawableLeft="@drawable/easy_community_recommend_icon"
+        android:text="@string/recommend_info"/>
+
+    <!--信息查询-->
+    <TextView
+        android:id="@+id/easy_search_info_btn"
+        style="@style/easy_btn_style"
+        android:drawableLeft="@drawable/easy_search_info_icon"
+        android:text="@string/search_info"/>
+
+</LinearLayout>

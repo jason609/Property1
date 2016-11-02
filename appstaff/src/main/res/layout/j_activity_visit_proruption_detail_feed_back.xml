@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="vertical">
+
+        <!--到访人-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="到  访  人 :"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"
+                />
+            <TextView
+                android:id="@+id/visit_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/LargeTextSize"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!--拜访人-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拜  访  人 :"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/visit_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+        </LinearLayout>
+
+        <!--拜访房间 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拜访房间："
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/visit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+        </LinearLayout>
+
+        <!--到访人数-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="到访人数 :"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/visit_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+        </LinearLayout>
+
+        <!--车牌号-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车  牌  号 :"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/visit_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+        </LinearLayout>
+
+        <!--拜访人电话-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拜访人电话 :"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/visit_car_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+        </LinearLayout>
+
+        <!--预计停留时间-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预计停留时间 :"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+            <TextView
+                android:id="@+id/visit_stop_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/LargeTextSize"
+                android:textColor="#999999"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_photo"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拜访人照片 :"
+            android:textSize="@dimen/LargeTextSize"
+            android:textColor="#999999"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:layout_below="@id/tv_photo"
+            android:paddingBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv01_second_hand_transfer"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true"
+                android:layout_width="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/green_add_img_icon"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/iv02_second_hand_transfer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/green_add_img_icon"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_weight="1"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/iv03_second_hand_transfer"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/green_add_img_icon"
+                android:layout_width="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/LargeTextSize"
+            android:text="同意进入"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center"
+            android:textColor="@color/text_white"
+            android:gravity="center"
+            android:background="@drawable/tv_shape_yellow"/>
+
+    </LinearLayout>
+</LinearLayout>
+

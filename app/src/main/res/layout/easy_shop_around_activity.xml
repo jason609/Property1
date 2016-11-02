@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <!--第一行搜索商家-->
+    <LinearLayout
+        android:id="@+id/main_top_layout"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/keyword_text"
+                android:padding="@dimen/activity_padding"
+                android:layout_margin="@dimen/activity_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textColorHint="@color/text_gray"
+                android:hint="@string/pls_input_keyword"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_margin="@dimen/activity_padding_smaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="@string/search"
+                android:background="@drawable/green_bg_shap"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--按钮-->
+    <LinearLayout
+        android:layout_below="@+id/main_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:orientation="horizontal">
+
+            <!--酒店-->
+            <TextView
+                android:id="@+id/btn_easy_hotel"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_hotel_icon"
+                android:text="@string/easy_hotel"/>
+
+            <!-- 生活服务-->
+            <TextView
+                android:id="@+id/btn_easy_life"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_life_icon"
+                android:text="@string/easy_life"/>
+
+            <!--洗衣-->
+            <TextView
+                android:id="@+id/btn_easy_landry"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_landry_icon"
+                android:text="@string/easy_landry"/>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:orientation="horizontal">
+
+            <!--休闲娱乐-->
+            <TextView
+                android:id="@+id/btn_easy_entertain"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_entertain_icon"
+                android:text="@string/easy_entertain"/>
+
+            <!--电影-->
+            <TextView
+                android:id="@+id/btn_easy_movie"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_movie_icon"
+                android:text="@string/easy_movie"/>
+
+            <!--美食-->
+            <TextView
+                android:id="@+id/btn_easy_food"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_food_icon"
+                android:text="@string/easy_food"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:orientation="horizontal">
+
+            <!--KTV-->
+            <TextView
+                android:id="@+id/btn_easy_ktv"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_ktv_icon"
+                android:text="@string/easy_ktv"/>
+
+            <!--咖啡-->
+            <TextView
+                android:id="@+id/btn_easy_coffee"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_coffee_icon"
+                android:text="@string/easy_coffee"/>
+
+            <!--健身-->
+            <TextView
+                android:id="@+id/btn_easy_gym"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_gym_icon"
+                android:text="@string/easy_gym"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:orientation="horizontal">
+
+            <!--停车-->
+            <TextView
+                android:id="@+id/btn_easy_parking"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_parking_icon"
+                android:text="@string/easy_parking"/>
+
+            <!--美容-->
+            <TextView
+                android:id="@+id/btn_easy_facial"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_facial_icon"
+                android:text="@string/easy_facial"/>
+
+            <!--旅游-->
+            <TextView
+                android:id="@+id/btn_easy_traval"
+                style="@style/main_btn_style"
+                android:drawableTop="@drawable/easy_service_traval_icon"
+                android:text="@string/easy_traval"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,286 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ctrl.android.property.jason.ui.secondmarket.DetailToBuyActivity">
+
+    <include layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="10dp">
+        <com.ctrl.android.property.jason.ui.customctrol.RoundImageView
+            android:layout_alignParentLeft="true"
+            android:id="@+id/iv_photo"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/touxiang2x"
+            />
+
+        <TextView
+            android:id="@+id/tv_detail_to_buy_name"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/iv_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/LargeTextSize"/>
+        <TextView
+            android:id="@+id/tv_detail_to_buy_time"
+            android:layout_below="@id/tv_detail_to_buy_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/iv_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/LargeTextSize"
+            android:text=""/>
+
+
+        <ImageView
+            android:id="@+id/iv001"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tv_detail_to_buy_time"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:src="@drawable/line_gray_shape"/>
+        <TextView
+            android:id="@+id/tv_detail_to_buy_baobei_title_left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/iv001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宝贝标题："
+            android:textSize="@dimen/LargeTextSize"/>
+        <TextView
+            android:id="@+id/tv_detail_to_buy_baobei_title_right"
+            android:layout_toRightOf="@id/tv_detail_to_buy_baobei_title_left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/iv001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/LargeTextSize"/>
+        <TextView
+            android:id="@+id/tv_detail_to_buy_baobei_price_left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tv_detail_to_buy_baobei_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        价格："
+            android:textSize="@dimen/LargeTextSize"/>
+        <TextView
+            android:id="@+id/tv_detail_to_buy_baobei_price_right"
+            android:layout_toRightOf="@id/tv_detail_to_buy_baobei_title_left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/tv_detail_to_buy_baobei_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/text_green"
+            android:textSize="@dimen/LargeTextSize"/>
+        <TextView
+            android:id="@+id/tv_baobei_image"
+            android:layout_below="@id/tv_detail_to_buy_baobei_price_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/baobei_image"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+        <LinearLayout
+            android:layout_below="@id/tv_baobei_image"
+            android:id="@+id/ll_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_want_transfer_baobei_image01"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageView
+                android:id="@+id/iv_want_transfer_baobei_image02"
+                android:layout_toRightOf="@id/iv_want_transfer_baobei_image01"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+               />
+            <ImageView
+                android:id="@+id/iv_want_transfer_baobei_image03"
+                android:layout_toRightOf="@id/iv_want_transfer_baobei_image02"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_detail_to_buy_baobei_detail_left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/ll_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宝贝描述："
+            android:textSize="@dimen/LargeTextSize"/>
+        <TextView
+            android:id="@+id/tv_detail_to_buy_baobei_detail_right"
+            android:layout_toRightOf="@id/tv_detail_to_buy_baobei_title_left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/ll_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/LargeTextSize"/>
+
+        <TextView
+            android:id="@+id/tv_detail_to_buy_baobei_location_left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/tv_detail_to_buy_baobei_detail_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="       地点："
+            android:textSize="@dimen/LargeTextSize"/>
+        <TextView
+            android:id="@+id/tv_detail_to_buy_baobei_location_right"
+            android:layout_toRightOf="@id/tv_detail_to_buy_baobei_title_left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/tv_detail_to_buy_baobei_detail_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/LargeTextSize"/>
+
+        <ImageView
+            android:id="@+id/iv002"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tv_detail_to_buy_baobei_location_left"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:src="@drawable/line_gray_shape"/>
+
+        <TextView
+
+            android:layout_below="@+id/iv002"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/BasicTextSize"
+            />
+
+        <TextView
+            android:id="@+id/tv_contact_right"
+            android:layout_width="match_parent"
+            android:text=""
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/tv_contact"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv002"
+            android:layout_marginRight="200dp"
+            android:textSize="@dimen/BasicTextSize"
+            android:layout_alignLeft="@+id/et_contact_telephone"
+            android:layout_alignStart="@+id/et_contact_telephone" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/tv_contact_telephone"
+            android:layout_below="@id/tv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_telephone"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/BasicTextSize"
+            />
+
+        <TextView
+            android:id="@+id/tv_contact_telephone_right"
+            android:padding="5dp"
+            android:layout_below="@id/tv_contact"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_contact_telephone"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/BasicTextSize"
+            android:text=""
+            />
+
+        <ImageView
+            android:id="@+id/iv_baby_detail_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/green_tel_icon"
+            android:layout_alignBottom="@+id/tv_contact_telephone"
+            android:layout_alignRight="@+id/iv002"
+            android:layout_alignEnd="@+id/iv002" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/tv_contact_telephone_right"
+            android:id="@+id/tv_baby_detail_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/text_red"
+            android:text="删除信息"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/text_white"
+            android:gravity="center"
+            android:textSize="@dimen/LargeTextSize"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>
+

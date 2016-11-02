@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/mall_main_pop_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg">
+
+    <include android:id="@+id/pro_detail_header"
+        layout="@layout/toolbar_common_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"/>
+
+    <!--主要内容-->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_below="@+id/pro_detail_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--商品图片 viewpager-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center">
+
+                </android.support.v4.view.ViewPager>
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/activity_padding_small" />
+            </RelativeLayout>
+
+            <!--商品名称和收藏按钮-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/activity_padding_small"
+                android:paddingRight="@dimen/activity_padding_small">
+
+                <TextView
+                    android:id="@+id/pro_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:textColor="@color/text_black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:text="商品名称"/>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/pro_favor"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="@dimen/BasicTextSize"-->
+                    <!--android:textColor="@color/text_black"-->
+                    <!--android:drawableTop="@drawable/gray_favor_none"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:text="收藏"/>-->
+                <LinearLayout
+                    android:id="@+id/pro_favor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/pro_favor_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gray_favor_none"/>
+
+                    <TextView
+                        android:id="@+id/pro_favor_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/BasicTextSize"
+                        android:textColor="@color/text_black"
+                        android:text="收藏"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--价格-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/activity_padding_small"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/pro_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_orange"
+                    android:textSize="@dimen/LargestTextSize"
+                    android:text="￥ 555"/>
+
+            </LinearLayout>
+
+            <!--产品评价-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding_small"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="left"
+                        android:text="产品评价"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.ctrl.android.property.eric.ui.widget.ListViewForScrollView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:footerDividersEnabled="true"
+                        android:divider="@null">
+
+                    </com.ctrl.android.property.eric.ui.widget.ListViewForScrollView>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/more_comment_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_padding_small"
+                    android:background="@drawable/green_border_shap"
+                    android:textColor="@color/text_green"
+                    android:text="更多评价"/>
+
+            </LinearLayout>
+
+            <!--图文详细-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding_small"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:gravity="left">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:gravity="left"
+                    android:text="图文详细"/>
+
+
+            </LinearLayout>
+
+            <!--图文详细 的 webview-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding_small"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/header_height"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:textColor="@color/text_black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/detail_img1"
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:scaleType="fitXY"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/detail_img2"
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:scaleType="fitXY"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/detail_img3"
+                        android:layout_width="240dp"
+                        android:layout_height="240dp"
+                        android:scaleType="fitXY"
+                        android:visibility="invisible"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--加入购物车和购买按钮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/add_to_cart_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/header_height"
+            android:layout_weight="1"
+            android:text="@string/add_to_cart"
+            android:gravity="center"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/LargeTextSize"
+            android:background="@color/light_green"/>
+
+        <TextView
+            android:id="@+id/buy_right_now_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/header_height"
+            android:layout_weight="1"
+            android:text="@string/buy_right_now"
+            android:gravity="center"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/LargeTextSize"
+            android:background="@color/dark_green"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

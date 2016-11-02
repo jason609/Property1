@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true">
+
+        <!--诚信行logo-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_login"/>
+
+        <!--用户名-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="60dp">
+
+            <EditText
+                android:id="@+id/username_text"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:textSize="15sp"
+                android:hint="请输入用户名或员工编号"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/login_username"
+                android:background="@color/text_green"/>
+
+        </LinearLayout>
+
+        <!--密码-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/password_text"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:paddingTop="10dp"
+                android:inputType="textPassword"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:textSize="15sp"
+                android:hint="输入密码"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/login_psw"
+                android:background="@color/text_green"/>
+
+        </LinearLayout>
+
+        <!--登录按钮-->
+        <TextView
+            android:id="@+id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:background="@drawable/green_bg_shap"
+            android:text="用户登录"
+            android:textSize="20sp"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+</RelativeLayout>

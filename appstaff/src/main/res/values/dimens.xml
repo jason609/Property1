@@ -1,0 +1,69 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="activity_padding">16dp</dimen>
+
+    <dimen name="activity_padding_small">10dp</dimen>
+    <dimen name="activity_padding_smaller">6dp</dimen>
+
+    <!--header的高度-->
+    <dimen name="header_height">52dp</dimen>
+    <!--header下面菜单或其他布局的高度-->
+    <dimen name="commen_under_header_height">52dp</dimen>
+    <dimen name="text_element_height">52dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="home_icon_margin">10dp</dimen>
+
+    <!--相邻控件之间距离-->
+    <dimen name="between_element_margin">1dp</dimen>
+
+    <!--头像宽高-->
+    <dimen name="my_head_icon_width">80dp</dimen>
+    <dimen name="my_head_icon_height">80dp</dimen>
+
+    <!--listview中的item之间空隙大小-->
+    <dimen name="list_divier">10dp</dimen>
+
+    <!--listview中 小图片宽-->
+    <dimen name="image_small_width">70dp</dimen>
+    <dimen name="image_smaller_width">50dp</dimen>
+
+    <dimen name="image_smallest_width">30dp</dimen>
+    <dimen name="image_smallest_height">30dp</dimen>
+
+    <!--listview中 小图片高-->
+    <dimen name="image_small_height">90dp</dimen>
+    <dimen name="image_smaller_height">70dp</dimen>
+
+    <!--listview中 大图片高-->
+    <dimen name="image_large_height">140dp</dimen>
+    <dimen name="image_large_width">140dp</dimen>
+
+    <!--首行高度-->
+    <dimen name="first_line_height">80dp</dimen>
+
+    <!--滑动删除按钮的宽-->
+    <dimen name="slip_del_btn_width">70dp</dimen>
+
+    <dimen name="LargeTextSize">16sp</dimen>
+    <dimen name="BasicTextSize">15sp</dimen>
+    <dimen name="TitleTextSize">18sp</dimen>
+    <dimen name="SmallTextSize">14sp</dimen>
+    <dimen name="SmallerTextSize">13sp</dimen>
+    <dimen name="LargestTextSize">30sp</dimen>
+
+    <dimen name="ChattingTextSize">16dp</dimen>
+    <dimen name="ChattingContentMinHeight">49dp</dimen>
+    <dimen name="PreferenceItemHeight">42dp</dimen>
+    <dimen name="ConversationItemHeight">58dp</dimen>
+    <dimen name="LargeAvatarSize">56dp</dimen>
+
+<!--**********************************************************************************-->
+
+    <!-- jason create 2015/09/28-->
+    <dimen name="TextViewHeight">48dp</dimen>
+    <dimen name="activity_horizontal_textview_margin">5dp</dimen>
+    <dimen name="edittextpaddingleft">5dp</dimen>
+</resources>

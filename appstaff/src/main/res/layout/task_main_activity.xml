@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_bg" >
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:orientation="vertical"
+        android:paddingBottom="70dp"
+        android:paddingTop="40dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_repair"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="报修派工"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="60dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/orage_bg"/>
+        <TextView
+            android:id="@+id/tv_complaint"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="投诉派工"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="60dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/orage_bg"/>
+        <TextView
+            android:id="@+id/tv_task"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="任务处理"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="60dp"
+            android:textSize="18sp"
+            android:layout_marginBottom="40dp"
+            android:textStyle="bold"
+            android:background="@drawable/orage_bg"/>
+
+    </LinearLayout>
+
+</LinearLayout>

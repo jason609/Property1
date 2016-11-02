@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.ctrl.android.property.jason.ui.mall.SearchGoodsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TextViewHeight">
+    <EditText
+        android:id="@+id/et_search_goods_search"
+        android:drawableLeft="@drawable/green_search_icon"
+        android:drawablePadding="10dp"
+        android:hint="搜索店内商品"
+        android:layout_width="0dp"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/BasicTextSize"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/edit_shap_gray_search"
+        />
+
+     <TextView
+         android:id="@+id/tv_search_goods_confirm"
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:text="确定"
+         android:layout_marginBottom="5dp"
+         android:gravity="center"
+         android:background="@null"
+         android:textSize="@dimen/LargeTextSize"
+         android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/line_gray_shape"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热门推荐"
+        android:textSize="@dimen/BasicTextSize"
+        android:textColor="@color/text_green"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        />
+    <GridView
+        android:id="@+id/gv_search_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </GridView>
+
+
+
+</LinearLayout>

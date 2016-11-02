@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp"
+    android:clickable="true"
+    android:background="#b0000000"
+    android:orientation="vertical"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_bg_shap"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center"
+            android:background="#f2f2f2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:padding="10dp"
+                android:gravity="center"
+                android:visibility="visible"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="标题"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center"
+            android:background="#f2f2f2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:padding="16dp"
+                android:gravity="center"
+                android:visibility="visible"
+                android:background="#ffffff"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="确定删除?"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#f2f2f2"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#0a80da"
+                android:text="确  定" />
+
+            <Button
+                android:id="@+id/middleButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textColor="#0a80da"
+                android:text="最小化" />
+
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textColor="#0a80da"
+                android:text="取  消" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <!--<ScrollView-->
+        <!--android:id="@+id/scroll_view"-->
+        <!--android:layout_below="@+id/header"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <LinearLayout
+            android:layout_below="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/basic_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding_small"
+                android:paddingLeft="@dimen/activity_padding_small"
+                android:paddingRight="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!--基本信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--设备名称-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="设备名称 : "/>
+
+                        <TextView
+                            android:id="@+id/device_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+
+                    </LinearLayout>
+
+                    <!--设备位置-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="设备位置 : "/>
+
+                        <TextView
+                            android:id="@+id/device_locate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+
+                    </LinearLayout>
+
+                    <!--购置时间-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="购置时间 : "/>
+
+                        <TextView
+                            android:id="@+id/device_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+
+                    </LinearLayout>
+
+                    <!--养护周期-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="养护周期 : "/>
+
+                        <TextView
+                            android:id="@+id/device_cycle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+
+                    </LinearLayout>
+
+                    <!--责任人-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="责任人 : "/>
+
+                        <TextView
+                            android:id="@+id/device_man"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+
+                    </LinearLayout>
+
+                    <!--维护厂家-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="维护厂家 : "/>
+
+                        <TextView
+                            android:id="@+id/device_provider"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+
+                    </LinearLayout>
+
+                    <!--厂家电话-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="厂家电话 : "/>
+
+                        <TextView
+                            android:id="@+id/device_tel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+                        <ImageView
+                            android:id="@+id/tel_btn"
+                            android:padding="@dimen/activity_padding_smaller"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/green_phone_icon"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding_small"
+                android:paddingLeft="@dimen/activity_padding_small"
+                android:paddingRight="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!--基本信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--养护人-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="养护人 : "/>
+
+                        <TextView
+                            android:id="@+id/device_record_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+
+                    </LinearLayout>
+
+                    <!--养护时间-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="养护时间 : "/>
+
+                        <TextView
+                            android:id="@+id/device_record_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+
+                    </LinearLayout>
+
+                    <!--设备状态-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="设备状态 : "/>
+
+                        <TextView
+                            android:id="@+id/device_record_status"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+
+                    </LinearLayout>
+
+                    <!--养护内容-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/BasicTextSize"
+                            android:text="养护内容 : "/>
+
+                        <TextView
+                            android:id="@+id/device_record_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/SmallTextSize"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding_small"
+                android:paddingLeft="@dimen/activity_padding_small"
+                android:paddingRight="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!--基本信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_01"
+                        android:layout_width="@dimen/image_small_height"
+                        android:layout_height="@dimen/image_small_height"
+                        android:layout_margin="@dimen/activity_padding_small"/>
+
+                    <ImageView
+                        android:id="@+id/img_02"
+                        android:layout_width="@dimen/image_small_height"
+                        android:layout_height="@dimen/image_small_height"
+                        android:layout_margin="@dimen/activity_padding_small"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/img_03"
+                        android:layout_width="@dimen/image_small_height"
+                        android:layout_height="@dimen/image_small_height"
+                        android:layout_margin="@dimen/activity_padding_small"
+                        android:visibility="invisible"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    <!--</ScrollView>-->
+
+
+</RelativeLayout>

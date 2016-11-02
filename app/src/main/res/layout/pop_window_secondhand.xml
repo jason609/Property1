@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="110dp"
+    android:layout_height="80dp"
+    android:background="@drawable/edit_shap_green"
+    >
+    <TextView
+        android:id="@+id/tv_popwindow_transfer"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/feedback_icon"
+        android:text="@string/wo_yao_zhuan"
+        android:textSize="@dimen/BasicTextSize"
+        android:textColor="@color/white"/>
+    <View
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/line_white_shape"/>
+    <TextView
+        android:id="@+id/tv_popwindow_buy"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/feedback_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wo_yao_gou"
+        android:textSize="@dimen/BasicTextSize"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/activity_padding_small"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--业主-->
+            <!--<TextView-->
+                <!--android:id="@+id/house_owner"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingBottom="@dimen/activity_padding_small"-->
+                <!--android:singleLine="true"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:textColor="@color/text_black"-->
+                <!--android:textSize="@dimen/BasicTextSize"/>-->
+
+            <!--小区名称和时间-->
+            <TextView
+                android:id="@+id/house_name_and_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/SmallTextSize"/>
+
+        </LinearLayout>
+
+        <!--右侧缴费情况-->
+        <TextView
+            android:id="@+id/house_status_flg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding_smaller"
+            android:textColor="@color/text_white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buy_activity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <ScrollView
+        android:layout_below="@+id/header"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--第一行  订单状态 -->
+            <LinearLayout
+                android:layout_marginTop="@dimen/between_element_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/first_line_height"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/order_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/green_circle_shap"
+                    android:drawablePadding="@dimen/activity_padding_smaller"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/TitleTextSize"/>
+
+            </LinearLayout>
+
+            <!--第二行  评价状态 -->
+            <!--<LinearLayout-->
+                <!--android:layout_marginTop="@dimen/activity_padding_smaller"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/first_line_height"-->
+                <!--android:background="@color/white"-->
+                <!--android:orientation="vertical"-->
+                <!--android:gravity="center_vertical">-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/order_comment_text"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:drawableLeft="@drawable/green_circle_shap"-->
+                        <!--android:drawablePadding="@dimen/activity_padding_smaller"-->
+                        <!--android:textColor="@color/text_black"-->
+                        <!--android:textSize="@dimen/TitleTextSize"/>-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="@dimen/activity_padding_small"-->
+                    <!--android:gravity="right">-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/order_comment_btn"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:drawablePadding="@dimen/activity_padding_smaller"-->
+                        <!--android:padding="@dimen/activity_padding_smaller"-->
+                        <!--android:background="@drawable/green_bg_shap"-->
+                        <!--android:textColor="@color/text_white"-->
+                        <!--android:textSize="@dimen/LargeTextSize"-->
+                        <!--android:text="评价"/>-->
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--商品列表-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.ctrl.android.property.eric.ui.widget.ListViewForScrollView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:footerDividersEnabled="true"
+                    android:divider="@null">
+
+                </com.ctrl.android.property.eric.ui.widget.ListViewForScrollView>
+
+            </LinearLayout>
+
+            <!--配送信息标题-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding_small"
+                android:padding="@dimen/activity_padding_small"
+                android:textColor="@color/text_black"
+                android:background="@color/white"
+                android:layout_gravity="left|center_vertical"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="配送信息" />
+
+            <!--订单号-->
+            <TextView
+                android:id="@+id/order_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:layout_gravity="left|center_vertical"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="" />
+
+            <!--下单时间-->
+            <TextView
+                android:id="@+id/order_create_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:layout_gravity="left|center_vertical"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="" />
+
+            <!--联系人-->
+            <TextView
+                android:id="@+id/order_contactor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:layout_gravity="left|center_vertical"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="" />
+
+            <!--配送地址-->
+            <TextView
+                android:id="@+id/order_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:layout_gravity="left|center_vertical"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="" />
+
+            <!--支付方式-->
+            <TextView
+                android:id="@+id/order_pay_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:layout_gravity="left|center_vertical"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="" />
+
+            <!--成交时间-->
+            <TextView
+                android:id="@+id/order_deal_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/white"
+                android:layout_gravity="left|center_vertical"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/cancel_pay_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/comment_btn"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/dark_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TitleTextSize"
+            android:text="去评价"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/dark_gray"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TitleTextSize"
+            android:text="取消订单"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/pay_btn"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/dark_green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TitleTextSize"
+            android:text="去支付"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

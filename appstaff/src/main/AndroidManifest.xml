@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ctrl.android.property.staff" >
+
+    <!--访问网络连接，可能产生GPRS流量-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序写入外部存储，如SD卡上写文件-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--分享权限-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+
+    <!-- 二维码 -->
+    <uses-permission android:name="android.permission.VIBRATE" />  <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+
+    <!--极光推送配置权限-->
+    <permission
+        android:name="com.ctrl.android.property.staff.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.ctrl.android.property.staff.permission.JPUSH_MESSAGE" />
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.ctrl.android.property.staff.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application android:name="com.ctrl.android.property.staff.base.MyApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AradAppTheme">
+        <activity
+            android:name=".StartActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--极光推送配置-->
+        <!-- For test only 测试高级功能 -->
+        <activity android:name="com.ctrl.android.property.staff.jpush.PushSetActivity" android:label="@string/app_name"></activity>
+        <!-- For test only 测试设置 -->
+        <activity android:name="com.ctrl.android.property.staff.jpush.SettingActivity" android:label="@string/app_name"></activity>
+        <!-- For test only 测试状态通知栏，需要打开的Activity -->
+        <activity android:name="com.ctrl.android.property.staff.jpush.TestActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ctrl.android.property.staff" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.ctrl.android.property.staff" />
+            </intent-filter>
+
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.ctrl.android.property.staff" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="com.ctrl.android.property.staff.jpush.MyReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.ctrl.android.property.staff" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="57bf0292e92e556335287b61" /> <!--  </>值来自开发者平台取得的AppKey-->
+
+
+        <activity android:name="com.ctrl.android.property.staff.MainActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.LoginActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.my.MyActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.forum.ForumActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.forum.ForumDetailActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.forum.ForumeListActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.forum.ForumStartNoteActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.widget.ImageZoomActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.device.DeviceActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.device.DeviceActivity2"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.device.DeviceSearchActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.device.DeviceHistoryActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.device.DeviceAddRecordActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.task.TaskAddActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.device.DeviceRecordDetailActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.task.TaskDetailActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.contact.ContactActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.contact.ContactActivity2"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.task.TaskDetailActivity2"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.my.ChangePasswordActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.my.MySettingActivity"/>
+        <activity android:name="com.ctrl.android.property.staff.ui.task.TaskListActivity"/>
+
+        <activity android:name="com.ctrl.android.property.staff.jpush.TipActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+
+
+<!--************************************************************************************-->
+
+        <service
+            android:name=".update.UpdateService"
+            >
+        </service>
+        <activity android:name=".ui.CustomActivity.TestanroidpicActivity" />
+        <activity android:name=".ui.notice.NoticeListActivity" />
+        <activity android:name=".ui.notice.NoticeDetailActivity" />
+        <activity android:name=".ui.patrol.PatrolActivity" />
+        <activity android:name=".ui.patrol.PatrolLineActivity" />
+        <activity android:name=".ui.repair.ChargeBackCauseActivity" />
+        <activity android:name=".ui.repair.RepairsActivity" />
+        <activity android:name=".ui.repair.RepairsAftertreatmentActivity" />
+        <activity android:name=".ui.repair.RepairsPretreatmentActivity" />
+        <activity android:name=".ui.visit.VisitHandleActivity" />
+        <activity android:name=".ui.visit.VisitProruptionActivity" />
+        <activity android:name=".ui.visit.VisitProruptionDetailActivity" />
+        <activity android:name=".ui.visit.VisitProruptionDetailFeedBackActivity" />
+        <activity android:name=".ui.visit.VisitProruptionReleaseActivity" />
+        <activity android:name=".ui.visit.VisitOrderHandleDetailActivity" />
+        <activity android:name=".ui.visit.VisitOrderActivity" />
+        <activity android:name=".ui.express.ExpressListActivity"/>
+        <activity android:name=".ui.express.ExpressDetailActivity"/>
+        <activity android:name=".ui.express.ExpressHandleActivity"/>
+        <activity android:name=".ui.qrcode.QrCodeActivity"/>
+        <activity android:name=".ui.complaint.ComplaintActivity"/>
+        <activity android:name=".ui.complaint.ComplaintAftertreatmentActivity"/>
+        <activity android:name=".ui.complaint.ComplaintPretreatmentActivity"/>
+        <activity android:name=".ui.task.TaskActivity"/>
+        <activity android:name=".ui.task.ComplaintAppointActivity"/>
+        <activity android:name=".ui.task.RepairAppointActivity"/>
+        <activity android:name=".ui.task.ComplaintPendingDetailActivity"/>
+        <activity android:name=".ui.task.ComplaintEndDetailActivity"/>
+        <activity android:name=".ui.task.RepairPendingDetailActivity"/>
+        <activity android:name=".ui.task.RepairEndDetailActivity"/>
+
+
+    </application>
+
+</manifest>

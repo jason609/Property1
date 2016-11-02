@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--主体部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--第一行: 基本信息-->
+            <RelativeLayout
+                android:id="@+id/infoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/top_bg_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/my_top_bg"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/welcome_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/activity_padding"
+                        android:gravity="center"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/LargeTextSize"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/top_bg_layout"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:background="@color/white">
+
+                    <!--我的订单-->
+                    <LinearLayout
+                        android:id="@+id/my_order_btn_with_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/activity_padding"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/my_orders_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/LargeTextSize"
+                            android:textColor="@color/text_black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_orders"/>
+
+                    </LinearLayout>
+
+                    <!--我的快递-->
+                    <LinearLayout
+                        android:id="@+id/my_express_btn_wirh_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/activity_padding"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/my_express_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/LargeTextSize"
+                            android:textColor="@color/text_black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_express"/>
+
+                    </LinearLayout>
+
+                    <!--我的积分-->
+                    <LinearLayout
+                        android:id="@+id/my_score_btn_with_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/activity_padding"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/my_score_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/LargeTextSize"
+                            android:textColor="@color/text_black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_score"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--头像-->
+                <com.ctrl.android.property.eric.ui.widget.RoundImageView
+                    android:id="@+id/userIcon"
+                    android:layout_width="@dimen/my_head_icon_width"
+                    android:layout_height="@dimen/my_head_icon_width"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/activity_padding"
+                    android:scaleType="centerCrop"
+                    android:textSize="@dimen/LargeTextSize"/>
+
+                <ImageView
+                    android:id="@+id/my_setting_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/setting_icon"/>
+
+
+            </RelativeLayout>
+
+            <!--第二行小区定位-->
+            <RelativeLayout
+                android:id="@+id/my_locate_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:background="@color/white"
+                android:clickable="true"
+                android:padding="@dimen/activity_padding"
+                android:layout_marginBottom="@dimen/between_element_margin">
+
+                <ImageView
+                    android:id="@+id/icon_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/green_location_icon"/>
+
+                <LinearLayout
+                    android:layout_toRightOf="@+id/icon_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/my_community_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_black" />
+                    <TextView
+                        android:id="@+id/my_community_house"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:paddingTop="@dimen/activity_padding_smaller"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/arrow0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/gray_arrow_right_none"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/blue_red_line"/>
+
+            <!--第三行-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/main_bg">
+
+                <!--商城订单-->
+                <RelativeLayout
+                    android:id="@+id/shop_order_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_shop_orders_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/shop_order" />
+
+                    <ImageView
+                        android:id="@+id/arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                    </RelativeLayout>
+
+                <!--缴费记录-->
+                <RelativeLayout
+                    android:id="@+id/my_pay_history_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_pay_history_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/pay_history" />
+
+                    <ImageView
+                        android:id="@+id/arrow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--我的活动-->
+                <RelativeLayout
+                    android:id="@+id/my_activity_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_activity_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/my_activity" />
+
+                    <ImageView
+                        android:id="@+id/arrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--我的投诉-->
+                <RelativeLayout
+                    android:id="@+id/my_complain_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_complain_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/my_complain" />
+
+                    <ImageView
+                        android:id="@+id/arrow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--我的报修-->
+                <RelativeLayout
+                    android:id="@+id/my_repair_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_repair_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/my_repair" />
+
+                    <ImageView
+                        android:id="@+id/arrow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--预约及到访-->
+                <RelativeLayout
+                    android:id="@+id/my_appointment_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_appointment_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/my_appointment" />
+
+                    <ImageView
+                        android:id="@+id/arrow6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--我的分类信息-->
+                <RelativeLayout
+                    android:id="@+id/my_community_info_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_community_info_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/my_community_info" />
+
+                    <ImageView
+                        android:id="@+id/arrow7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--我的快递-->
+                <RelativeLayout
+                    android:id="@+id/my_express_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_express_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/my_express" />
+
+                    <ImageView
+                        android:id="@+id/arrow8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--我的优惠券-->
+                <RelativeLayout
+                    android:id="@+id/my_coupon_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_09"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_coupon_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_09"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/my_coupon" />
+
+                    <ImageView
+                        android:id="@+id/arrow9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--我的积分-->
+                <RelativeLayout
+                    android:id="@+id/my_score_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_score_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/my_score" />
+
+                    <ImageView
+                        android:id="@+id/arrow10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--footer-->
+    <include
+        android:id="@+id/footer_layout"
+        layout="@layout/main_menu_btns"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="main_bg">#f2f2f2</color>
+    <color name="element_bg">#fafafa</color>
+    <color name="bottombar_bg">#f0f0f0</color>
+    <color name="divider">#eeeeee</color>
+
+    <color name="lighter_green">#99c8b8</color>
+    <color name="light_green">#289576</color>
+    <color name="dark_green">#00744d</color>
+
+    <color name="light_gray">#efefef</color>
+    <color name="dark_gray">#a7a7a7</color>
+
+    <color name="text_gray">#a7a7a7</color>
+    <color name="text_black">#333333</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_blue">#4ab9e7</color>
+    <color name="text_yellow">#ff7d00</color>
+    <color name="text_red">#fe3232</color>
+    <color name="text_green">#289576</color>
+    <color name="text_orange">#f75431</color>
+
+
+
+    <!-- **************************************************************************-->
+
+    <color name="chaoshi_grad_btn_4">#3EC6FF</color>
+    <color name="chaoshi_grad_btn_4_press">#1E9FD6</color>
+
+
+    <!--扫码-->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+</resources>

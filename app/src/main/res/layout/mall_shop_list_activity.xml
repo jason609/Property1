@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"/>
+
+    <!--第一行: 显示排序方式和店铺分类-->
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:id="@+id/sort_shop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/commen_under_header_height"
+        android:layout_marginBottom="@dimen/between_element_margin"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--排序方式-->
+        <LinearLayout
+            android:id="@+id/mall_main_sort_style_btn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@color/element_bg"
+            android:layout_marginRight="@dimen/between_element_margin"
+            android:layout_marginEnd="@dimen/between_element_margin"
+            android:layout_height="@dimen/commen_under_header_height"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mall_main_sort_style_btn_left_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/sort_icon"/>
+            <TextView
+                android:id="@+id/mall_main_sort_style_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="@string/sort_style"/>
+            <ImageView
+                android:id="@+id/mall_main_sort_style_btn_right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/gray_arrow_down"/>
+
+        </LinearLayout>
+
+        <!--店铺类型-->
+        <LinearLayout
+            android:id="@+id/mall_main_shop_style_btn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@color/element_bg"
+            android:layout_marginLeft="@dimen/between_element_margin"
+            android:layout_marginStart="@dimen/between_element_margin"
+            android:layout_height="@dimen/commen_under_header_height"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mall_main_shop_style_btn_left_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/shop_icon"/>
+
+            <TextView
+                android:id="@+id/mall_main_shop_style_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="@string/shop_style"/>
+
+            <ImageView
+                android:id="@+id/mall_main_shop_style_btn_right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/gray_arrow_down"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!--商家列表-->
+    <LinearLayout
+        android:layout_below="@+id/sort_shop_layout"
+        android:id="@+id/mall_main_pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/pull_to_refresh_listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/sort_shop_layout"
+        android:id="@+id/sort_style_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:visibility="gone"
+        android:background="#e0999999"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/sort_style_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:footerDividersEnabled="true"
+            android:divider="@null">
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/sort_shop_layout"
+        android:id="@+id/shop_style_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:orientation="vertical"
+        android:background="#e0999999"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/shop_style_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:footerDividersEnabled="true"
+            android:divider="@null">
+        </ListView>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

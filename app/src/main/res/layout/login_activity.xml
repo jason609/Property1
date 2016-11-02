@@ -1,0 +1,157 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:paddingLeft="@dimen/activity_padding"
+    android:paddingRight="@dimen/activity_padding">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/property_logo"
+            android:paddingBottom="@dimen/activity_padding"
+            android:layout_marginBottom="@dimen/activity_padding"/>
+
+        <!-- 用户名-->
+        <LinearLayout
+            android:id="@+id/username_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_padding_small"
+            android:background="@drawable/login_text_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_padding_small"
+                android:layout_gravity="center"
+                android:src="@drawable/login_icon_02"/>
+
+            <EditText
+                android:id="@+id/username_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:background="@null"
+                android:textColorHint="#ebebeb"
+                android:hint="@string/pls_input_username_or_mobile_num"/>
+
+        </LinearLayout>
+
+        <!-- 密码-->
+        <LinearLayout
+            android:id="@+id/password_layout"
+            android:layout_below="@+id/username_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_padding_small"
+            android:background="@drawable/login_text_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_padding_small"
+                android:layout_gravity="center"
+                android:src="@drawable/login_icon_01"/>
+
+            <EditText
+                android:id="@+id/password_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@null"
+                android:textColorHint="#ebebeb"
+                android:hint="@string/pls_input_password"/>
+
+        </LinearLayout>
+
+        <!-- 登录-->
+        <LinearLayout
+            android:id="@+id/login_layout"
+            android:layout_below="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_padding_small"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_padding"
+                android:layout_marginRight="@dimen/activity_padding"
+                android:textColor="@color/text_white"
+                android:background="@drawable/light_green_bg_shap"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="@string/login"/>
+
+        </LinearLayout>
+
+        <!-- 忘记密码-->
+        <LinearLayout
+            android:id="@+id/forget_password_layout"
+            android:layout_below="@+id/login_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_padding_small"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/forget_password_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forget_password"
+                android:textColor="#8fc5b3"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 注册-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/activity_padding"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/regest_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding_small"
+            android:layout_marginRight="@dimen/activity_padding"
+            android:textSize="@dimen/LargeTextSize"
+            android:background="@drawable/white_border_shap"
+            android:text="@string/regest"
+            android:textColor="#8fc4b0"/>
+
+        <TextView
+            android:id="@+id/visiter_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding_small"
+            android:layout_marginLeft="@dimen/activity_padding"
+            android:textSize="@dimen/LargeTextSize"
+            android:background="@drawable/white_border_shap"
+            android:text="@string/visiter"
+            android:textColor="#8fc4b0"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/activity_padding_small"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_padding_small"
+        android:orientation="horizontal">
+
+        <!--左侧图-->
+        <ImageView
+            android:id="@+id/activity_img"
+            android:layout_width="@dimen/image_large_width"
+            android:layout_height="@dimen/image_large_height"
+            android:scaleType="fitXY"/>
+
+        <!--活动标识图-->
+        <ImageView
+            android:id="@+id/activity_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/activity_padding_small"/>
+
+        <!--中间商品信息-->
+        <LinearLayout
+            android:layout_toRightOf="@+id/activity_img"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/image_large_height"
+            android:paddingLeft="@dimen/activity_padding_small"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--活动名称-->
+            <TextView
+                android:id="@+id/activity_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_weight="1"
+                android:textColor="@color/text_red"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/LargeTextSize"/>
+
+            <!--活动时间-->
+            <TextView
+                android:id="@+id/activity_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/LargeTextSize"/>
+
+            <!--活动详细按钮-->
+            <TextView
+                android:id="@+id/activity_detail_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_orange"
+                android:textSize="@dimen/LargeTextSize"
+                android:text="@string/activity_detail"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

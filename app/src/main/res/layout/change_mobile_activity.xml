@@ -1,0 +1,121 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/activity_padding"
+        android:orientation="vertical">
+
+        <!--找回信息部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_padding"
+            android:background="@color/main_bg"
+            android:orientation="vertical">
+
+            <!--旧手机号-->
+            <EditText
+                android:id="@+id/old_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_padding_smaller"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:hint="旧手机号"
+                android:background="@color/white"
+                android:textColorLink="@color/text_gray"
+                android:textCursorDrawable="@null"
+                android:paddingBottom="@dimen/activity_padding"
+                android:paddingTop="@dimen/activity_padding"
+                android:paddingLeft="@dimen/activity_padding" />
+
+            <!--新手机号-->
+            <EditText
+                android:id="@+id/new_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_padding_smaller"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:hint="新手机号"
+                android:background="@color/white"
+                android:textColorLink="@color/text_gray"
+                android:textCursorDrawable="@null"
+                android:paddingBottom="@dimen/activity_padding"
+                android:paddingTop="@dimen/activity_padding"
+                android:paddingLeft="@dimen/activity_padding" />
+
+            <LinearLayout
+                android:id="@+id/password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_padding_smaller"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <!--验证码-->
+                <EditText
+                    android:id="@+id/vertify_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="输入验证码"
+                    android:background="@color/white"
+                    android:textColorLink="@color/text_gray"
+                    android:textCursorDrawable="@null"
+                    android:paddingRight="@dimen/activity_padding"
+                    android:paddingBottom="@dimen/activity_padding"
+                    android:paddingTop="@dimen/activity_padding"
+                    android:paddingLeft="@dimen/activity_padding"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/get_vertify_code_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/activity_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="获取验证码"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        
+        <!--提交按钮-->
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="提  交"
+            android:background="@drawable/green_bg_shap"
+            android:textColor="@color/white"
+            android:textSize="@dimen/LargeTextSize"
+            android:layout_margin="@dimen/activity_padding"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

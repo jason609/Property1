@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <!--中间主体部分-->
+    <ScrollView
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_padding"
+        android:layout_marginBottom="@dimen/header_height">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--标题行-->
+            <LinearLayout
+                android:id="@+id/item"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:focusable="false"
+                android:descendantFocusability="blocksDescendants"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small">
+
+                <!--标题-->
+                <TextView
+                    android:id="@+id/forum_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/TitleTextSize"
+                    android:text=""/>
+
+                <!--赞 看 评-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/activity_padding_small"
+                    android:gravity="right">
+
+                    <!--赞-->
+                    <TextView
+                        android:id="@+id/forum_favor_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/activity_padding_small"
+                        android:drawableLeft="@drawable/forum_favor_icon"
+                        android:drawablePadding="@dimen/activity_padding_smaller"
+                        android:singleLine="true"
+                        android:textSize="@dimen/SmallTextSize"
+                        android:textColor="@color/dark_gray"/>
+
+                    <!--看-->
+                    <TextView
+                        android:id="@+id/forum_look_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/activity_padding_small"
+                        android:drawableLeft="@drawable/forum_look_icon"
+                        android:drawablePadding="@dimen/activity_padding_smaller"
+                        android:singleLine="true"
+                        android:textSize="@dimen/SmallTextSize"
+                        android:textColor="@color/dark_gray"/>
+
+                    <!--评-->
+                    <TextView
+                        android:id="@+id/forum_comment_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/forum_comment_icon"
+                        android:drawablePadding="@dimen/activity_padding_smaller"
+                        android:paddingRight="@dimen/activity_padding_small"
+                        android:singleLine="true"
+                        android:textSize="@dimen/SmallTextSize"
+                        android:textColor="@color/dark_gray"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--发表人 时间 等-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/between_element_margin"
+                android:background="@color/white"
+                android:padding="@dimen/activity_padding_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/forum_writer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/TitleTextSize"
+                    android:textColor="@color/dark_green"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/forum_detail_man_icon"
+                    android:drawablePadding="@dimen/activity_padding_smaller"
+                    android:text="楼主"/>
+
+                <TextView
+                    android:id="@+id/forum_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:gravity="right"
+                    android:layout_weight="2"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <!--帖子内容-->
+            <TextView
+                android:id="@+id/forum_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/activity_padding_small"
+                android:text=""/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/forum_img"
+                    android:layout_width="@dimen/image_large_width"
+                    android:layout_height="@dimen/image_large_height"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+
+
+            <!--赞-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/activity_padding_small"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/forum_like_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/forum_green_like_big" />
+
+            </LinearLayout>
+
+            <!--评论列表-->
+            <com.ctrl.android.property.eric.ui.widget.ListViewForScrollView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding"
+                android:footerDividersEnabled="true"
+                android:divider="@null">
+
+            </com.ctrl.android.property.eric.ui.widget.ListViewForScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--footer-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/main_bg">
+
+        <EditText
+            android:id="@+id/forum_comment_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/activity_padding_smaller"
+            android:layout_marginBottom="@dimen/activity_padding_smaller"
+            android:layout_marginLeft="@dimen/activity_padding"
+            android:padding="@dimen/activity_padding_smaller"
+            android:gravity="center_vertical"
+            android:hint="发表精彩回复"
+            android:layout_weight="4"/>
+        <TextView
+            android:id="@+id/forum_comment_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_bg_shap"
+            android:layout_margin="@dimen/activity_padding_smaller"
+            android:layout_weight="1"
+            android:padding="@dimen/activity_padding_smaller"
+            android:gravity="center"
+            android:textSize="@dimen/LargeTextSize"
+            android:textColor="@color/text_white"
+            android:text="发表"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

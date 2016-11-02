@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--主体部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--第一行: 基本信息-->
+            <RelativeLayout
+                android:id="@+id/infoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/top_bg_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/my_top_bg"
+                        android:gravity="bottom">
+
+                        <TextView
+                            android:id="@+id/welcome_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/activity_padding"
+                            android:gravity="center"
+                            android:textColor="@color/text_white"
+                            android:textSize="@dimen/LargeTextSize"
+                            android:text="欢迎你 郭靖"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_below="@+id/top_bg_layout"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/belong_to_community"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/activity_padding_small"
+                            android:textSize="@dimen/LargeTextSize"
+                            android:textColor="@color/text_black"
+                            android:text="所属XXXX项目组"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--头像-->
+                <com.ctrl.android.property.staff.ui.widget.RoundImageView
+                    android:id="@+id/userIcon"
+                    android:layout_width="@dimen/my_head_icon_width"
+                    android:layout_height="@dimen/my_head_icon_width"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/activity_padding"
+                    android:scaleType="centerCrop"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:src="@drawable/touxiang"/>
+
+                <ImageView
+                    android:id="@+id/my_setting_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/setting_icon"/>
+
+
+            </RelativeLayout>
+
+            <!--第二行-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/main_bg">
+
+                <!--我的通知-->
+                <RelativeLayout
+                    android:id="@+id/my_notice_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_notice_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="我的通知" />
+
+                    <ImageView
+                        android:id="@+id/arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                    </RelativeLayout>
+
+                <!--我的论坛-->
+                <RelativeLayout
+                    android:id="@+id/my_forum_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_forum_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="我的论坛" />
+
+                    <ImageView
+                        android:id="@+id/arrow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--我的报修-->
+                <RelativeLayout
+                    android:id="@+id/my_repair_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_repair_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="我的报修" />
+
+                    <ImageView
+                        android:id="@+id/arrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--预约及到访-->
+                <RelativeLayout
+                    android:id="@+id/my_visit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_visit_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="预约及到访" />
+
+                    <ImageView
+                        android:id="@+id/arrow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--代收快递-->
+                <RelativeLayout
+                    android:id="@+id/my_express_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_express_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="代收快递" />
+
+                    <ImageView
+                        android:id="@+id/arrow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--巡更巡查-->
+                <RelativeLayout
+                    android:id="@+id/my_partrol_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_partrol_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="巡视巡查" />
+
+                    <ImageView
+                        android:id="@+id/arrow6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--设备养护-->
+                <RelativeLayout
+                    android:id="@+id/my_equipment_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_equipment_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="设备养护" />
+
+                    <ImageView
+                        android:id="@+id/arrow7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+                <!--任务指派-->
+                <RelativeLayout
+                    android:id="@+id/my_task_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:padding="@dimen/activity_padding"
+                    android:layout_marginBottom="@dimen/between_element_margin">
+
+                    <ImageView
+                        android:id="@+id/icon_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_task_icon"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/icon_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/LargeTextSize"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_padding"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_gray"
+                        android:text="任务指派" />
+
+                    <ImageView
+                        android:id="@+id/arrow8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/gray_arrow_right_none"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

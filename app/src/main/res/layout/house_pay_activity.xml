@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/main_bg"
+    android:layout_height="match_parent">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_below="@+id/header"
+        android:id="@+id/basic_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_padding_small"
+        android:layout_marginBottom="@dimen/activity_padding_small"
+        android:padding="@dimen/activity_padding"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!--基本信息-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/house_owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/BasicTextSize"
+                android:text="中润世纪城    10-1-201"/>
+
+            <!--小区名称和时间-->
+            <!--<TextView-->
+                <!--android:id="@+id/house_name_and_time"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/text_black"-->
+                <!--android:textSize="@dimen/SmallTextSize"-->
+                <!--android:text="楼栋: 15号楼-15-201室"/>-->
+
+        </LinearLayout>
+
+        <!--缴费记录-->
+        <TextView
+            android:id="@+id/house_pay_history_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding_smaller"
+            android:layout_marginRight="@dimen/activity_padding_small"
+            android:background="@drawable/green_border_shap"
+            android:textColor="@color/dark_green"
+            android:text="@string/pay_history"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@+id/basic_info_layout"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="52dp"
+        android:divider="@null">
+    </ListView>
+
+    <!--表头-->
+    <!--<RadioGroup-->
+        <!--android:layout_below="@+id/basic_info_layout"-->
+        <!--android:id="@+id/radio_group"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/between_element_margin"-->
+        <!--android:background="@color/white"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:minHeight="48dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/radio_month_one"-->
+            <!--android:layout_width="0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/checkbox_green_style01"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="3月份"-->
+            <!--android:textColor="@drawable/checkbox_green_text_color_selector"-->
+            <!--android:singleLine="true"-->
+            <!--android:layout_marginLeft="@dimen/activity_padding"-->
+            <!--android:padding="@dimen/activity_padding_smaller"-->
+            <!--android:textSize="@dimen/BasicTextSize">-->
+        <!--</RadioButton>-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/radio_month_two"-->
+            <!--android:layout_width="0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/checkbox_green_style03"-->
+            <!--android:textColor="@drawable/checkbox_green_text_color_selector"-->
+            <!--android:text="2月份"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="@dimen/activity_padding_smaller"-->
+            <!--android:singleLine="true"-->
+            <!--android:textSize="15sp"-->
+            <!--android:checked="false">-->
+        <!--</RadioButton>-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/radio_month_three"-->
+            <!--android:layout_width="0dip"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/checkbox_green_style02"-->
+            <!--android:textColor="@drawable/checkbox_green_text_color_selector"-->
+            <!--android:text="1月份"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:singleLine="true"-->
+            <!--android:layout_marginRight="@dimen/activity_padding"-->
+            <!--android:padding="@dimen/activity_padding_smaller"-->
+            <!--android:textSize="15sp"-->
+            <!--android:checked="false">-->
+        <!--</RadioButton>-->
+
+    <!--</RadioGroup>-->
+
+    <!--内容-->
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:layout_below="@+id/radio_group"-->
+        <!--android:id="@+id/viewpager"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:flipInterval="400"-->
+        <!--android:persistentDrawingCache="animation" />-->
+
+    <!--footer-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:paddingLeft="@dimen/activity_padding"
+        android:layout_marginTop="@dimen/between_element_margin"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/green_cart_none"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/LargeTextSize"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/house_pay_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_padding_small"
+                android:layout_marginRight="@dimen/activity_padding"
+                android:background="@drawable/green_bg_shap"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/TitleTextSize"
+                android:text="@string/house_pay"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--header-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--顶部背景-->
+        <ImageView
+            android:id="@+id/main_top_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_sdf"/>
+
+        <!--主要按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:padding="@dimen/activity_padding_small"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/mainLLayoutStyle">
+
+                <!--内部通知-->
+                <LinearLayout
+                   android:id="@+id/main_notice_btn"
+                    style="@style/mainLinearLayoutStyle">
+
+                    <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:src="@drawable/main_notice"/>
+                   <TextView
+                       style="@style/mainTextViewStyle"
+                       android:layout_weight="1"
+                       android:text="内部通知" />
+
+                </LinearLayout>
+
+                <!--内部论坛-->
+                <LinearLayout
+                    android:id="@+id/main_forum_btn"
+                    style="@style/mainLinearLayoutStyle">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/main_forum"/>
+
+                    <TextView
+                        style="@style/mainTextViewStyle"
+                        android:layout_weight="1"
+                        android:text="内部论坛" />
+
+                </LinearLayout>
+
+                <!--报修-->
+                <LinearLayout
+                    android:id="@+id/main_repair_btn"
+                    style="@style/mainLinearLayoutStyle">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/main_repair"/>
+                    <TextView
+                        style="@style/mainTextViewStyle"
+                        android:layout_weight="1"
+                        android:text="报修管理" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/mainLLayoutStyle">
+
+                <!--预约访客-->
+                <LinearLayout
+                    android:id="@+id/main_visit_btn"
+                    style="@style/mainLinearLayoutStyle">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/main_order"/>
+
+                    <TextView
+                        style="@style/mainTextViewStyle"
+                        android:layout_weight="1"
+                        android:text="预约访客"/>
+
+                </LinearLayout>
+
+                <!--代收快递-->
+                <LinearLayout
+                    android:id="@+id/main_express_btn"
+                    style="@style/mainLinearLayoutStyle">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/main_express"/>
+
+                    <TextView
+                        style="@style/mainTextViewStyle"
+                        android:layout_weight="1"
+                        android:text="代收快递"/>
+
+                </LinearLayout>
+
+                <!--巡更巡查-->
+                <LinearLayout
+                    android:id="@+id/main_partrol_btn"
+                    style="@style/mainLinearLayoutStyle">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/main_xunluo"/>
+                    <TextView
+                        style="@style/mainTextViewStyle"
+                        android:layout_weight="1"
+                        android:text="巡视巡查"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/mainLLayoutStyle">
+
+                <!--设备养护-->
+                <LinearLayout
+                    android:id="@+id/main_equipment_btn"
+                    style="@style/mainLinearLayoutStyle">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/main_equipment"/>
+
+                    <TextView
+                        style="@style/mainTextViewStyle"
+                        android:layout_weight="1"
+                        android:text="设备养护"/>
+
+                </LinearLayout>
+
+                <!--任务指派-->
+                <LinearLayout
+                    android:id="@+id/main_task_btn"
+                    style="@style/mainLinearLayoutStyle">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/main_mission"/>
+
+                    <TextView
+                        style="@style/mainTextViewStyle"
+                        android:layout_weight="1"
+                        android:text="任务指派"/>
+
+                </LinearLayout>
+
+                <!--自定义模块-->
+                <LinearLayout
+                    android:id="@+id/main_custom_btn"
+                    style="@style/mainLinearLayoutStyle">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/complaint"/>
+
+                    <TextView
+                        style="@style/mainTextViewStyle"
+                        android:layout_weight="1"
+                        android:text="投诉管理"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

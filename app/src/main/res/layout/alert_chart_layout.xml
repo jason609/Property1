@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@drawable/white_bg_shap"
+    android:padding="@dimen/activity_padding_small"
+    android:orientation="vertical"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/alert_layout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/TitleTextSize"
+            android:text="感谢您的参与"/>
+
+        <LinearLayout
+            android:id="@+id/chart_layout"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/choice_num_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/choice_img_a"
+                    android:padding="@dimen/activity_padding_smaller"
+                    android:gravity="center"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:textColor="@color/text_black"
+                    android:text="50"/>
+
+                <ImageView
+                    android:id="@+id/choice_img_a"
+                    android:layout_width="@dimen/image_small_width"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/choice_title_a"
+                    android:scaleType="fitXY"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/choice_a_bg"/>
+
+                <TextView
+                    android:id="@+id/choice_title_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_padding_smaller"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:textColor="@color/text_black"
+                    android:text="射频卡"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/choice_num_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/choice_img_b"
+                    android:padding="@dimen/activity_padding_smaller"
+                    android:gravity="center"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:textColor="@color/text_black"
+                    android:text="100"/>
+
+                <ImageView
+                    android:id="@+id/choice_img_b"
+                    android:layout_width="@dimen/image_small_width"
+                    android:layout_height="100dp"
+                    android:layout_above="@+id/choice_title_b"
+                    android:scaleType="fitXY"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/choice_b_bg"/>
+
+                <TextView
+                    android:id="@+id/choice_title_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_padding_smaller"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:textColor="@color/text_black"
+                    android:text="蓝牙卡"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/choice_num_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/choice_img_c"
+                    android:padding="@dimen/activity_padding_smaller"
+                    android:gravity="center"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:textColor="@color/text_black"
+                    android:text="70"/>
+
+                <ImageView
+                    android:id="@+id/choice_img_c"
+                    android:layout_width="@dimen/image_small_width"
+                    android:layout_height="70dp"
+                    android:layout_above="@+id/choice_title_c"
+                    android:scaleType="fitXY"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/choice_c_bg"/>
+
+                <TextView
+                    android:id="@+id/choice_title_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activity_padding_smaller"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textSize="@dimen/LargeTextSize"
+                    android:textColor="@color/text_black"
+                    android:text="二维码"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_padding_small"
+            android:padding="@dimen/activity_padding_small"
+            android:textColor="@color/white"
+            android:background="@drawable/orange_bg_shap"
+            android:text="返 回"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

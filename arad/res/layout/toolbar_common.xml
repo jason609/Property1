@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+    app:contentInsetEnd="0dp"
+    app:contentInsetStart="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#289576">
+
+        <!--左侧按钮-->
+        <ImageView
+            android:id="@+id/toolbar_leftbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="13dp"
+            android:src="@drawable/toolbar_back"
+            android:visibility="gone" />
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/actionbar_title"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"/>
+
+        <!--社区名称-->
+        <!--<TextView-->
+            <!--android:id="@+id/toolbar_area_locate"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="12sp"-->
+            <!--android:singleLine="true"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawableLeft="@drawable/toolbar_locate_icon"-->
+            <!--android:drawableStart="@drawable/toolbar_locate_icon"-->
+            <!--android:drawableRight="@drawable/toolbar_white_arrow_down"-->
+            <!--android:drawableEnd="@drawable/toolbar_white_arrow_down"/>-->
+
+        <!--右侧按钮-->
+        <ImageView
+            android:id="@+id/toolbar_rightbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="13dp"
+            android:src="@drawable/ic_add"
+            android:visibility="gone" />
+
+        <!--右侧文本-->
+        <TextView
+            android:id="@+id/toolbar_rightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <!--评价返回信息提示-->
+        <LinearLayout
+            android:id="@+id/feedback_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/feedback_img_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/feedback_icon"/>
+                <TextView
+                    android:id="@+id/feedback_nums"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#f75431"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/white_circle_bg"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <!--登录和注册按钮-->
+        <LinearLayout
+            android:id="@+id/login_regest_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="13dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_toolbar_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:text="登录"/>
+            <View
+                android:id="@+id/view01"
+                android:layout_width="1dp"
+                android:layout_height="16sp"
+                android:background="@color/white"/>
+            <TextView
+                android:id="@+id/tv_toolbar_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:text="注册"/>
+            
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

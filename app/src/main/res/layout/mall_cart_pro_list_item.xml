@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--删除按钮-->
+    <LinearLayout
+        android:layout_width="@dimen/slip_del_btn_width"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/cart_del_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_white"
+            android:background="@color/dark_green"
+            android:gravity="center"
+            android:text="删除"/>
+    </LinearLayout>
+
+    <!--内容部分-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:focusable="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent">
+
+        <!--选择按钮-->
+        <CheckBox
+            android:id="@+id/pro_checkbox"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:button="@drawable/checkbox_green_selector" />
+
+        <!--商品图片-->
+        <ImageView
+            android:id="@+id/pro_image"
+            android:layout_width="@dimen/image_small_width"
+            android:layout_height="@dimen/image_small_height"
+            android:layout_marginLeft="@dimen/activity_padding_smaller"
+            android:paddingRight="@dimen/activity_padding_smaller"/>
+
+
+        <!--商品信息-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--商品名称-->
+            <TextView
+                android:id="@+id/pro_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/BasicTextSize"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginBottom="@dimen/activity_padding_smaller"
+                android:textColor="@color/text_black" />
+
+
+            <!--加减商品数量-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="left"
+                android:padding="1dp">
+
+                <!--数量-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/activity_padding_small"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:layout_marginBottom="@dimen/activity_padding_smaller"
+                    android:text="@string/pro_num"
+                    android:textColor="@color/text_black" />
+
+                <!--减号-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/num_minus_btn"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:background="@drawable/green_minus"/>
+
+                <!--数量-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:id="@+id/pro_num"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:minWidth="36dp"
+                    android:background="@color/white"
+                    android:layout_marginRight="1dp" />
+
+                <!--加号-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:id="@+id/num_add_btn"
+                    android:padding="12dp"
+                    android:background="@drawable/green_plus" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--商品价格-->
+                <TextView
+                    android:id="@+id/pro_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:textColor="@color/text_red" />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</com.daimajia.swipe.SwipeLayout>
+

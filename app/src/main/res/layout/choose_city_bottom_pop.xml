@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@color/main_bg"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/superman_cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/white"
+                    android:text="@string/superman_cancel"
+                    android:background="@drawable/chaoshi_grid_btn_4_selector"
+                    android:layout_alignParentLeft="true"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@color/main_bg"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/superman_ok_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/chaoshi_grid_btn_4_selector"
+                    android:text="@string/superman_ok"
+                    android:layout_alignParentRight="true"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <com.ctrl.android.property.jason.ui.city.CityPicker
+            android:id="@+id/cityPicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+    </LinearLayout>
+
+</RelativeLayout>

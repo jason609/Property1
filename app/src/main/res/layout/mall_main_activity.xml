@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_locate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"/>
+
+    <LinearLayout
+        android:id="@+id/mall_main_pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--第二行: 广告图片-->
+        <RelativeLayout
+            android:id="@+id/mall_main_ad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/between_element_margin">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+            </android.support.v4.view.ViewPager>
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/activity_padding_small" />
+
+            <ImageView
+                android:id="@+id/mall_main_ad_close_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/close_cross"/>
+
+        </RelativeLayout>
+
+        <!--第三行: 类型分类  美食 电影 外卖 酒店-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginBottom="@dimen/between_element_margin"
+            android:gravity="center"
+            android:background="@color/element_bg"
+            android:orientation="horizontal">
+
+            <!--美食-->
+            <LinearLayout
+                android:id="@+id/mall_food_btn"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/element_bg"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableTop="@drawable/mall_main_food_icon"
+                    android:gravity="center"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="@string/food"/>
+
+            </LinearLayout>
+
+            <!--电影-->
+            <LinearLayout
+                android:id="@+id/mall_movie_btn"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/element_bg"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableTop="@drawable/mall_main_movie_icon"
+                    android:gravity="center"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="@string/movie"/>
+
+            </LinearLayout>
+
+            <!--外卖-->
+            <LinearLayout
+                android:id="@+id/mall_takeout_btn"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/element_bg"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableTop="@drawable/mall_main_takeout_icon"
+                    android:gravity="center"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="@string/takeout"/>
+
+            </LinearLayout>
+
+            <!--酒店-->
+            <LinearLayout
+                android:id="@+id/mall_hotel_btn"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_padding_small"
+                android:background="@color/element_bg"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableTop="@drawable/mall_main_hotel_icon"
+                    android:gravity="center"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/BasicTextSize"
+                    android:text="@string/hotel"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <!--第四行: 商家列表-->
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/pull_to_refresh_listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
